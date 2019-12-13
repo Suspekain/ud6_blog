@@ -4,7 +4,7 @@
 <br>
   <!-- Page Content -->
   <div class="container">
-  <a href= ""><button type="button" class="btn btn-secondary">New Post</button></a><br><br>
+  <a href= "{{route('posts.create')}}"><button type="button" class="btn btn-secondary">New Post</button></a><br><br>
 
 
   <table class="table table-condensed">
@@ -25,13 +25,13 @@
         <td>{{$p->title}}</td>
         <td>{{date("j/m/Y H:i:s", strtotime($p->published_at))}}</td>
         <td>
-        <a title="Ver" href=""><i class="fa fa-eye" style="color:black"></i></a>
+        <a title="Ver" href="{{route ('posts.show',$p->id)}}"><i class="fa fa-eye" style="color:black"></i></a>
         </td>
         <td>
-          <a title="Editar" href=""><i class="fa fa-pencil" style="color:black"></i></a>
+          <a title="Editar" href="{{route ('posts.edit',$p->id)}}"><i class="fa fa-pencil" style="color:black"></i></a>
         </td>
         <td>
-        <form style="display:inline" action="" method="POST">
+        <form style="display:inline" action="{{ route('posts.destroy',$p->id) }}" method="POST">
            {{ method_field('DELETE') }}
            {{ csrf_field() }}
            <button type="submit" id="delete" style="background: none;padding: 0px;border: none;color:red">
