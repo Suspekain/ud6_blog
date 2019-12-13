@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Post;
+use App\Category;
 
 class PostController extends Controller
 {
@@ -18,9 +19,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create() {
+      $categorias = Category::all();
+      return view('posts.create', ['categorias'=>$categorias]);
     }
 
     /**
@@ -40,9 +41,8 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-      
+    public function show($id) {
+      return view('posts.post', ['post' => Post::find($id)]);
     }
 
     /**
