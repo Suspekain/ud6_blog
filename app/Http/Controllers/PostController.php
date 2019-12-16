@@ -62,8 +62,9 @@ class PostController extends Controller {
     return view('posts.index',['post'=>$post]);
   }
 
-  public function destroy($id)
-  {
-    //
+  public function destroy($id) {
+    Post::where("id",$id)->delete();
+    $posts=Post::all();
+    return view("post.index",['posts'=>$posts]);
   }
 }

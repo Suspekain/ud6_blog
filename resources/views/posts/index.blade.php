@@ -27,13 +27,7 @@
         <a title="Editar" href="{{route('post.edit', $p->id)}}"><i class="fa fa-pencil" style="color:black"></i></a>
       </td>
       <td>
-        <form style="display:inline" action="" method="POST">
-          {{ method_field('DELETE') }}
-          {{ csrf_field() }}
-          <button type="submit" id="delete" style="background: none;padding: 0px;border: none;color:red">
-            <i class="fa fa-trash-o" style="color:black"></i>
-          </button>
-        </form>
+        <a title="Eliminar" href="{{route('post.destroy', $p->id)}}"><i class="fa fa-trash-o" style="color:black"></i></a>
       </td>
     </tr>
     @endforeach
