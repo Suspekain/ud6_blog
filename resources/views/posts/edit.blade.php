@@ -2,7 +2,7 @@
 
 @section('content')
 <br>
-<form method="GET" action="{{route('post.update', $post->id)}}">
+<form method="PUT" action="{{route('post.update', $post->id)}}">
   @csrf
   Titulo: <input type="text" name="title" value="{{$post->title}}"><br><br>
   Subtitulo: <input type="text" name="excerpt" value="{{$post->excerpt}}"><br><br>
