@@ -6,9 +6,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('post', 'PostController')->only(['index', 'show', 'create', 'edit', 'store', 'update', 'destroy']);
+Route::resource('post', 'PostController')->only(['index', 'show', 'create','store', 'edit', 'update', 'destroy']);
 
-
-Route::get('/admin', function () {
-    return view('admin');
-});
+Route::get('/admin', 'AdminController@index')->name('admin');

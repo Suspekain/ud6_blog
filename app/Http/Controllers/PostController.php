@@ -88,8 +88,8 @@ class PostController extends Controller {
     $post->user_id = Auth::user()->id;
     $post->save();
 
-    $post = Post::all();
-    return view('posts.index',['post'=>$post]);
+    $posts = Post::all();
+    return view('posts.index',['posts'=>$posts]);
   }
 
   /**
@@ -101,6 +101,6 @@ class PostController extends Controller {
   public function destroy($id) {
     Post::where("id",$id)->delete();
     $posts=Post::all();
-    return view("post.index",['posts'=>$posts]);
+    return view("posts.index",['posts'=>$posts]);
   }
 }

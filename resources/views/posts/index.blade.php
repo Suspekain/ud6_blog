@@ -27,7 +27,11 @@
         <a title="Editar" href="{{route('post.edit', $p->id)}}"><i class="fa fa-pencil" style="color:black"></i></a>
       </td>
       <td>
-        <a title="Eliminar" href="{{route('post.destroy', $p->id)}}"><i class="fa fa-trash-o" style="color:black"></i></a>
+        <form action="{{route('post.destroy', $p->id)}}" method="post">
+          @csrf
+          @method('DELETE')
+          <input type="submit" value="Eliminar">
+        </form>
       </td>
     </tr>
     @endforeach

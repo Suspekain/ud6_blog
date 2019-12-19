@@ -2,6 +2,5 @@
 
 ### Erroreak
 
-- DELETE lehen bazebilen orain SHOW egiten du
-- EDIT   lehen bazebilen orain SHOW egiten du
-- EDIT ongi dabil, baina UPDATE gaizki doa
+- Post zerrendan, erabiltzaile bakoitzarenak soilik egon behar du
+- CREATE + EDIT formularioak balidatu
