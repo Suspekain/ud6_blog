@@ -7,5 +7,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('post', 'PostController')->only(['index', 'show', 'create','store', 'edit', 'update', 'destroy']);
-
-Route::get('/admin', 'AdminController@index')->name('admin');
+Route::resource('admin', 'AdminController')->only(['index', 'show', 'create','store', 'edit', 'update', 'destroy']);
