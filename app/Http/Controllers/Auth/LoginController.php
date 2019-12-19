@@ -11,7 +11,7 @@ class LoginController extends Controller
   use AuthenticatesUsers;
 
   public function redirectTo() {
-    return route('admin');
+    return route('admin.index');
   }
 
   /**

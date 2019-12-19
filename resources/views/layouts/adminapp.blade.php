@@ -135,18 +135,7 @@
           <h2>Section title</h2>
           <div class="table-responsive">
             <table class="table table-striped table-sm">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                </tr>
-              </thead>
-              <tbody>
-                @yield('users')
-              </tbody>
+              @yield('users')
             </table>
           </div>
         </main>
